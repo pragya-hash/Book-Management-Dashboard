@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
 import { Books } from "./pages/Books";
@@ -9,7 +9,6 @@ import { ConfigProvider, theme as antdTheme } from "antd";
 
 const App: React.FC = () => {
   const { theme, setBooks, setUsers } = useAppStore();
-
   const isAuthenticated = useAppStore((state) => state.session.user);
 
   useEffect(() => {
@@ -30,7 +29,7 @@ const App: React.FC = () => {
   return (
     <div data-theme={theme}>
       <ConfigProvider theme={{ algorithm: theme === "dark" ? antdTheme.darkAlgorithm : antdTheme.defaultAlgorithm, token: { colorPrimary: "#1890ff" } }}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} >
@@ -40,11 +39,10 @@ const App: React.FC = () => {
             </Route>
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </ConfigProvider>
     </div>
   );
 };
 
 export default App;
-
