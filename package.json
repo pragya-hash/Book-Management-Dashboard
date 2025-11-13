@@ -2,7 +2,7 @@
   "name": "book-management-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://pragya-hash.github.io/book-dashboard",
+  "homepage": "https://pragya-hash.github.io/book-management-dashboard",
   "dependencies": {
     "@ant-design/icons": "^5.1.0",
     "antd": "^5.8.0",
