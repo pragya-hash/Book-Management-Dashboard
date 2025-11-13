@@ -18,16 +18,16 @@ export const HeaderComponent: React.FC = () => {
 
   const menu = (
     <Menu style={{ minWidth: 220, padding: 12 }}>
-      <Menu.Item key="user-info" disabled style={{ cursor: "default", background: "none" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <Avatar size={40} icon={<UserOutlined />} />
-          <div>
-            <div style={{ fontWeight: 700 }}>{user?.username || "User"}</div>
-            <div style={{ fontSize: 13, color: "#888" }}>{user?.username}@example.com</div>
-            <div style={{ fontSize: 12, color: "#b89b72" }}>{user?.role || "Role"}</div>
+        <Menu.Item key="user-info" disabled style={{ cursor: "default", background: "none" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <Avatar size={40} icon={<UserOutlined />} />
+            <div>
+              <div style={{ fontWeight: 700 }}>{user?.name || "User"}</div>
+              <div style={{ fontSize: 13, color: "#888" }}>{user?.email || "user@example.com"}</div>
+              <div style={{ fontSize: 12, color: "#b89b72" }}>{user?.role || "Role"}</div>
+            </div>
           </div>
-        </div>
-      </Menu.Item>
+        </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="logout" onClick={handleLogout}>
         <LogoutOutlined /> Logout
