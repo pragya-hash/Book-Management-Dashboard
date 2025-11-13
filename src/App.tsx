@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
 import { Books } from "./pages/Books";
@@ -14,12 +14,12 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/data.json');
+        const response = await fetch("./data.json"); // updated path for GitHub Pages
         const data = await response.json();
         setBooks(data.books);
         setUsers(data.users);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -28,18 +28,34 @@ const App: React.FC = () => {
 
   return (
     <div data-theme={theme}>
-      <ConfigProvider theme={{ algorithm: theme === "dark" ? antdTheme.darkAlgorithm : antdTheme.defaultAlgorithm, token: { colorPrimary: "#1890ff" } }}>
-        <BrowserRouter>
+      <ConfigProvider
+        theme={{
+          algorithm:
+            theme === "dark"
+              ? antdTheme.darkAlgorithm
+              : antdTheme.defaultAlgorithm,
+          token: { colorPrimary: "#1890ff" },
+        }}
+      >
+        <Router>
           <Routes>
-            <Route path="/login" element={isAuthenticated ? <Navigate to="/" /> : <Login />} />
-            <Route path="/" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} >
+            <Route
+              path="/login"
+              element={isAuthenticated ? <Navigate to="/" /> : <Login />}
+            />
+            <Route
+              path="/"
+              element={
+                isAuthenticated ? <Dashboard /> : <Navigate to="/login" />
+              }
+            >
               <Route index element={<Books />} />
               <Route path="books" element={<Books />} />
               <Route path="users" element={<Users />} />
             </Route>
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </ConfigProvider>
     </div>
   );
