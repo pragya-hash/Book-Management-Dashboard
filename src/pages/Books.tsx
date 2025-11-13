@@ -199,14 +199,6 @@ export const Books: React.FC = () => {
                 >
                   <Button size="small" danger>Delete</Button>
                 </Popconfirm>
-
-                {book.image ? (
-                  <img
-                    src={book.image}
-                    alt={`${book.title} front`}
-                    style={{ width: 60, height: 80, objectFit: "cover", borderRadius: 4 }}
-                  />
-                ) : null}
               </div>
             </div>
           ))}
