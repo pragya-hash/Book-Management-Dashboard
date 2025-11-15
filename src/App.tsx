@@ -14,7 +14,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("./data.json"); // updated path for GitHub Pages
+        const response = await fetch("./data.json");
         const data = await response.json();
         setBooks(data.books);
         setUsers(data.users);
