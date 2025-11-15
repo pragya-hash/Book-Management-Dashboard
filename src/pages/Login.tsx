@@ -34,7 +34,7 @@ export const Login: React.FC = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: 'url("/bg.jpg")',
+        backgroundImage: `url(${process.env.PUBLIC_URL}/bg.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

@@ -65,14 +65,6 @@
   background: #fff !important;
   box-shadow: 0 1px 4px rgba(184,155,114,0.04);
 }
-
-[data-theme="dark"] .users-search {
-  background: #000 !important;
-}
-
-[data-theme="dark"] .users-search::placeholder {
-  color: #fff !important;
-}
 .users-toggle {
   background: #f3e9db !important;
   border-radius: 8px !important;
