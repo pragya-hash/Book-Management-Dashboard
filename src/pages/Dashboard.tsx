@@ -68,18 +68,40 @@ export const Dashboard: React.FC = () => {
           boxShadow: "2px 0 6px rgba(0,0,0,0.06)"
         }}
       >
-        <div style={{ color: "#fff", fontSize: 20, textAlign: "center", padding: "12px 8px", fontWeight: 700 }}>
+        <div style={{ color: "#FFFFFF", fontSize: 20, textAlign: "center", padding: "12px 8px", fontWeight: 700 }}>
           My Library
         </div>
         <div style={{ padding: 12 }}>
-          <Button block icon={<BookOutlined />} onClick={() => navigate("/books")} style={{ marginBottom: 12, borderRadius: 8 }} type={(location.pathname === "/" || location.pathname === "/books") ? "primary" : "default"}>
+          <Button
+            block
+            icon={<BookOutlined />}
+            onClick={() => navigate("/books")}
+            style={{
+              marginBottom: 12,
+              borderRadius: 20,
+              background: (location.pathname === "/" || location.pathname === "/books") ? "rgba(255, 255, 255, 0.20)" : "transparent",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
+              color: "#FFFFFF"
+            }}
+          >
             Books
           </Button>
-          <Button block icon={<TeamOutlined />} onClick={() => navigate("/users")} style={{ marginBottom: 12, borderRadius: 8 }} type={location.pathname === "/users" ? "primary" : "default"}>
+          <Button
+            block
+            icon={<TeamOutlined />}
+            onClick={() => navigate("/users")}
+            style={{
+              marginBottom: 12,
+              borderRadius: 20,
+              background: location.pathname === "/users" ? "rgba(255, 255, 255, 0.20)" : "transparent",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
+              color: "#FFFFFF"
+            }}
+          >
             Users
           </Button>
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12 }}>
-            <span style={{ color: "#fff", fontSize: 14 }}>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
+            <span style={{ color: "#FFFFFF", fontSize: 14 }}>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
             <Switch checked={theme === "dark"} onChange={toggleTheme} />
           </div>
         </div>

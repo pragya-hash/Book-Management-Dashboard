@@ -34,41 +34,53 @@ export const Login: React.FC = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: `url(${process.env.PUBLIC_URL}/bg.jpg)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        background: "linear-gradient(135deg, #0A2A88 0%, #6A2BAF 100%)",
       }}
     >
       <Form
         name="login"
         onFinish={onFinish}
         style={{
-          background: "rgba(255, 255, 255, 0.85)",
-          padding: 24,
-          borderRadius: 8,
+          background: "rgba(255, 255, 255, 0.12)",
+          border: "1px solid rgba(255, 255, 255, 0.25)",
+          backdropFilter: "blur(20px)",
+          padding: 32,
+          borderRadius: 20,
           minWidth: 300,
+          color: "#FFFFFF"
         }}
       >
         <Form.Item
-          label="Email"
+          label={<span style={{ color: "#FFFFFF" }}>Email</span>}
           name="email"
           rules={[{ required: true, message: "Please input your email!" }]}
         >
-          <Input />
+          <Input style={{ background: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.25)", color: "#FFFFFF" }} />
         </Form.Item>
 
         <Form.Item
-          label="Password"
+          label={<span style={{ color: "#FFFFFF" }}>Password</span>}
           name="password"
           rules={[{ required: true, message: "Please input your password!" }]}
         >
-          <Input.Password />
+          <Input.Password style={{ background: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.25)", color: "#FFFFFF" }} />
         </Form.Item>
 
 
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" loading={loading} block>
+          <Button
+            type="primary"
+            htmlType="submit"
+            loading={loading}
+            block
+            style={{
+              background: "rgba(255, 255, 255, 0.20)",
+              border: "1px solid rgba(255, 255, 255, 0.30)",
+              color: "#FFFFFF",
+              borderRadius: 20
+            }}
+          >
             Login
           </Button>
         </Form.Item>

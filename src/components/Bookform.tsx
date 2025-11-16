@@ -25,17 +25,17 @@ export const BookForm: React.FC<BookFormProps> = ({ onClose }) => {
   };
 
   return (
-    <Form layout="vertical" onFinish={onFinish}>
+    <Form layout="vertical" onFinish={onFinish} style={{ color: "#FFFFFF" }}>
       <Form.Item name="title" rules={[{ required: true }]}>
-        <Input placeholder="Title" />
+        <Input placeholder="Title" style={{ background: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.25)", color: "#FFFFFF", borderRadius: 20 }} />
       </Form.Item>
       <Form.Item name="author" rules={[{ required: true }]}>
-        <Input placeholder="Author" />
+        <Input placeholder="Author" style={{ background: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.25)", color: "#FFFFFF", borderRadius: 20 }} />
       </Form.Item>
       <Form.Item name="description">
-        <Input.TextArea placeholder="Description" />
+        <Input.TextArea placeholder="Description" style={{ background: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.25)", color: "#FFFFFF", borderRadius: 20 }} />
       </Form.Item>
-      <Form.Item label="PDF (optional)">
+      <Form.Item label={<span style={{ color: "#FFFFFF" }}>PDF (optional)</span>}>
         <input
           type="file"
           accept="application/pdf"
@@ -44,14 +44,15 @@ export const BookForm: React.FC<BookFormProps> = ({ onClose }) => {
             if (!file) return;
             const reader = new FileReader();
             reader.onload = () => {
-              
+
               setPdfData(reader.result as string);
             };
             reader.readAsDataURL(file);
           }}
+          style={{ background: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.25)", color: "#FFFFFF", borderRadius: 20, padding: 8 }}
         />
       </Form.Item>
-      <Form.Item label="Image (optional)">
+      <Form.Item label={<span style={{ color: "#FFFFFF" }}>Image (optional)</span>}>
         <input
           type="file"
           accept="image/*"
@@ -64,16 +65,27 @@ export const BookForm: React.FC<BookFormProps> = ({ onClose }) => {
             };
             reader.readAsDataURL(file);
           }}
+          style={{ background: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.25)", color: "#FFFFFF", borderRadius: 20, padding: 8 }}
         />
         {imgData ? (
           <div style={{ marginTop: 8 }}>
-            <img src={imgData} alt="preview" style={{ width: 80, height: 100, objectFit: "cover" }} />
+            <img src={imgData} alt="preview" style={{ width: 80, height: 100, objectFit: "cover", borderRadius: 20 }} />
           </div>
         ) : null}
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" block>
+        <Button
+          type="primary"
+          htmlType="submit"
+          block
+          style={{
+            background: "rgba(255, 255, 255, 0.20)",
+            border: "1px solid rgba(255, 255, 255, 0.30)",
+            color: "#FFFFFF",
+            borderRadius: 20
+          }}
+        >
           Add
         </Button>
       </Form.Item>

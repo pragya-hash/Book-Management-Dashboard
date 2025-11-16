@@ -38,16 +38,18 @@ export const HeaderComponent: React.FC = () => {
   return (
     <Header
       style={{
-        background: theme == "light" ? "linear-gradient(90deg,#fafafa,#fff)" : "linear-gradient(90deg,#222,#111)",
+        background: "rgba(255, 255, 255, 0.12)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.25)",
+        backdropFilter: "blur(20px)",
         padding: "0 24px",
-        boxShadow: "0 1px 6px rgba(0,0,0,0.08)",
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        color: "#FFFFFF"
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-        <div style={{ fontSize: 18, color: theme === "light" ? "#001529" : "#fff" }}>Welcome to our library</div>
+        <div style={{ fontSize: 18, fontWeight: "bold", color: "#FFFFFF" }}>Welcome to our library</div>
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
         <Dropdown overlay={menu} trigger={["click"]} placement="bottomRight">
