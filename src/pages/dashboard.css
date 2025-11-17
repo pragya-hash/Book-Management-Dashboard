@@ -1,18 +1,18 @@
-/* Modern Light Theme Dashboard */
+/* Modern Glassmorphism Dashboard */
 .dashboard-root {
-  background: linear-gradient(135deg, #F2F4FF 0%, #FFFFFF 100%);
+  background: linear-gradient(135deg, #1a0f49 0%, #2e4bea 100%);
   min-height: 100vh;
   position: relative;
 }
 
 .dashboard-sider {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  backdrop-filter: blur(20px) !important;
-  border-radius: 24px !important;
-  border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(22px) !important;
+  border-radius: 22px !important;
+  border-right: none !important;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .ant-layout-content {
@@ -21,36 +21,35 @@
 }
 
 .dashboard-hero {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 32px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(25px);
+  border-radius: 22px;
+  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  color: #1a1a1a;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  color: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
   transition: all 0.3s ease;
 }
 
 .dashboard-hero .hero-text { flex: 1 }
 .dashboard-hero h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #FFFFFF;
   letter-spacing: 0.025em;
   line-height: 1.2;
-  font-family: 'Poppins', sans-serif;
 }
 
 .dashboard-hero p {
   margin: 0;
-  opacity: 0.8;
-  color: #666;
-  font-size: 1rem;
+  opacity: 0.95;
+  color: #D0D6F6;
+  font-size: 1.125rem;
   letter-spacing: 0.01em;
 }
 
@@ -62,31 +61,31 @@
 }
 
 .metric-card {
-  border-radius: 24px;
+  border-radius: 20px;
   padding: 24px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #1a1a1a;
+  color: #FFFFFF;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .metric-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.16);
 }
 
 .metric-left { display: flex; flex-direction: column; gap: 6px }
 .metric-icon {
-  font-size: 20px;
-  border-radius: 16px;
-  padding: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 22px;
+  border-radius: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.30);
   color: #FFFFFF;
   transition: all 0.3s ease;
 }
@@ -94,29 +93,28 @@
 .metric-value {
   font-size: 2rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #FFFFFF;
   letter-spacing: 0.01em;
-  font-family: 'Poppins', sans-serif;
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
-  border-radius: 24px;
+  border-radius: 20px;
   padding: 24px;
-  color: #1a1a1a;
+  color: #FFFFFF;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .stat-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.16);
 }
 
 .stat-label {
-  color: #666;
+  color: #D0D6F6;
   font-size: 14px;
   letter-spacing: 0.01em;
 }
@@ -124,9 +122,8 @@
 .stat-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #FFFFFF;
   letter-spacing: 0.01em;
-  font-family: 'Poppins', sans-serif;
 }
 
 .dashboard-main { margin-top: 24px }
@@ -147,36 +144,35 @@
 .search-input {
   padding: 12px 16px;
   border-radius: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
   width: 320px;
   max-width: 100%;
-  color: #1a1a1a;
+  color: #FFFFFF;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .search-input::placeholder {
-  color: #999;
+  color: #D0D6F6;
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.30);
   color: #FFFFFF;
   border-radius: 50px;
   padding: 12px 24px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.16);
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
 }
 
 @media (max-width: 900px) {
