@@ -36,7 +36,7 @@ export const Login: React.FC = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: theme === 'dark' ? "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)" : "linear-gradient(135deg, #0A2A88 0%, #6A2BAF 100%)",
+        background: "linear-gradient(135deg, #1C0F5F 0%, #2364D2 100%)",
         transition: 'all 0.3s ease'
       }}
     >

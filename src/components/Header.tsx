@@ -38,15 +38,15 @@ export const HeaderComponent: React.FC = () => {
   return (
     <Header
       style={{
-        background: theme === 'dark' ? "rgba(255, 255, 255, 0.05)" : "rgba(255, 255, 255, 0.12)",
-        borderBottom: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid rgba(255, 255, 255, 0.25)",
-        backdropFilter: "blur(20px)",
-        padding: "0 32px",
+        background: "rgba(255, 255, 255, 0.15)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.25)",
+        backdropFilter: "blur(25px)",
+        padding: "0 40px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
-        boxShadow: theme === 'dark' ? "0 2px 8px rgba(0,0,0,0.3)" : "0 2px 8px rgba(0,0,0,0.1)",
+        color: "#FFFFFF",
+        boxShadow: "0 20px 40px rgba(0, 0, 0, 0.25)",
         transition: 'all 0.3s ease'
       }}
     >

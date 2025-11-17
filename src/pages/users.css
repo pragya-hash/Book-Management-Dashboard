@@ -1,24 +1,18 @@
 
-/* Dark Mode */
-.users-toolbar.dark {
-  background: rgba(255, 255, 255, 0.12);
+/* Modern Glassmorphism Users */
+.users-toolbar {
+  background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
-  padding: 32px;
-  margin-bottom: 32px;
+  backdrop-filter: blur(25px);
+  border-radius: 22px;
+  padding: 40px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.users-toolbar.light {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .users-grid {
@@ -40,18 +34,11 @@
   justify-content: center;
   padding: 24px;
   color: #FFFFFF;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.user-card.light {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #1a1a1a;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .user-card:hover {
-  box-shadow: 0 12px 40px rgba(184,155,114,0.2);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
   transform: translateY(-8px) scale(1.02);
 }
 
@@ -63,43 +50,28 @@
   letter-spacing: 0.01em;
 }
 
-.user-name.light { color: #1a1a1a; }
-
 .user-role {
-  color: #D6DAE8;
+  color: #C9D3F5;
   font-size: 14px;
   letter-spacing: 0.01em;
 }
 
-.user-role.light { color: #666; }
-
 .add-user-fab {
-  background: rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.22);
   border: 1px solid rgba(255, 255, 255, 0.30);
   color: #FFFFFF;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 12px;
   padding: 12px 24px;
   height: auto;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.add-user-fab.light {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #1a1a1a;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 .add-user-fab:hover {
   background: rgba(255, 255, 255, 0.30);
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.add-user-fab.light:hover {
-  background: rgba(255, 255, 255, 1);
 }
 
 .users-search {
@@ -114,19 +86,8 @@
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-.users-search.light {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  color: #1a1a1a !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05) !important;
-}
-
 .users-search::placeholder {
-  color: #D6DAE8 !important;
-}
-
-.users-search.light::placeholder {
-  color: #999 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .users-toggle {
@@ -139,12 +100,6 @@
   transition: all 0.3s ease !important;
 }
 
-.users-toggle.light {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  color: #1a1a1a !important;
-}
-
 .users-empty {
   text-align: center;
   color: #FFFFFF;
@@ -154,10 +109,6 @@
   letter-spacing: 0.01em;
 }
 
-.users-empty.light {
-  color: #1a1a1a;
-}
-
 /* Table Styles for Users Page */
 .ant-table {
   background: rgba(255, 255, 255, 0.12) !important;
@@ -165,11 +116,7 @@
   backdrop-filter: blur(20px) !important;
   border-radius: 20px !important;
   overflow: hidden;
-}
-
-.ant-table.light {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .ant-table-thead > tr > th {
@@ -180,29 +127,14 @@
   letter-spacing: 0.01em;
 }
 
-.ant-table-thead.light > tr > th {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  color: #1a1a1a !important;
-}
-
 .ant-table-tbody > tr > td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
   color: #FFFFFF !important;
   transition: all 0.3s ease;
 }
 
-.ant-table-tbody.light > tr > td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-  color: #1a1a1a !important;
-}
-
 .ant-table-tbody > tr:hover > td {
   background: rgba(255, 255, 255, 0.1) !important;
-}
-
-.ant-table-tbody.light > tr:hover > td {
-  background: rgba(255, 255, 255, 0.8) !important;
 }
 
 
