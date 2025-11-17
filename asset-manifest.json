@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Book-Management-Dashboard-pragya-123/static/css/main.be545766.css",
-    "main.js": "/Book-Management-Dashboard-pragya-123/static/js/main.89ac7106.js",
+    "main.css": "/Book-Management-Dashboard-pragya-123/static/css/main.2a91ffc6.css",
+    "main.js": "/Book-Management-Dashboard-pragya-123/static/js/main.351eaa72.js",
     "index.html": "/Book-Management-Dashboard-pragya-123/index.html",
-    "main.be545766.css.map": "/Book-Management-Dashboard-pragya-123/static/css/main.be545766.css.map",
-    "main.89ac7106.js.map": "/Book-Management-Dashboard-pragya-123/static/js/main.89ac7106.js.map"
+    "main.2a91ffc6.css.map": "/Book-Management-Dashboard-pragya-123/static/css/main.2a91ffc6.css.map",
+    "main.351eaa72.js.map": "/Book-Management-Dashboard-pragya-123/static/js/main.351eaa72.js.map"
   },
   "entrypoints": [
-    "static/css/main.be545766.css",
-    "static/js/main.89ac7106.js"
+    "static/css/main.2a91ffc6.css",
+    "static/js/main.351eaa72.js"
   ]
 }
