@@ -88,22 +88,41 @@ export const Books: React.FC = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <div className="books-toolbar">
+      <div className={`books-toolbar ${theme}`}>
         <Space>
           {session.user?.role === "admin" && (
-            <Button type="primary" onClick={() => setModalVisible(true)}>
+            <Button
+              type="primary"
+              onClick={() => setModalVisible(true)}
+              className="add-book-fab"
+              style={{
+                background: theme === 'dark' ? "rgba(255, 255, 255, 0.20)" : "rgba(255, 255, 255, 0.9)",
+                border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.30)" : "1px solid rgba(0, 0, 0, 0.1)",
+                color: theme === 'dark' ? "#FFFFFF" : "#1a1a1a",
+                borderRadius: 50,
+                padding: "12px 24px",
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                boxShadow: theme === 'dark' ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "0 4px 12px rgba(0, 0, 0, 0.1)"
+              }}
+            >
               Add Book
             </Button>
           )}
           <Input
-            className="books-search"
+            className={`books-search ${theme}`}
             placeholder="Search by title or author"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            style={{ width: 300 }}
+            style={{ width: 320 }}
             allowClear
           />
-          <Segmented options={["grid", "list"]} value={view} onChange={(v: any) => setView(v)} className="books-toggle" />
+          <Segmented
+            options={["grid", "list"]}
+            value={view}
+            onChange={(v: any) => setView(v)}
+            className={`books-toggle ${theme}`}
+          />
         </Space>
       </div>
 

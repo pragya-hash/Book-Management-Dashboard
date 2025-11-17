@@ -38,22 +38,44 @@ export const HeaderComponent: React.FC = () => {
   return (
     <Header
       style={{
-        background: "rgba(255, 255, 255, 0.12)",
-        borderBottom: "1px solid rgba(255, 255, 255, 0.25)",
+        background: theme === 'dark' ? "rgba(255, 255, 255, 0.05)" : "rgba(255, 255, 255, 0.12)",
+        borderBottom: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid rgba(255, 255, 255, 0.25)",
         backdropFilter: "blur(20px)",
-        padding: "0 24px",
+        padding: "0 32px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        color: "#FFFFFF"
+        color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
+        boxShadow: theme === 'dark' ? "0 2px 8px rgba(0,0,0,0.3)" : "0 2px 8px rgba(0,0,0,0.1)",
+        transition: 'all 0.3s ease'
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-        <div style={{ fontSize: 18, fontWeight: "bold", color: "#FFFFFF" }}>Welcome to our library</div>
+      <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+        <div style={{
+          fontSize: 20,
+          fontWeight: "bold",
+          color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
+          letterSpacing: '0.01em'
+        }}>
+          Welcome to our library
+        </div>
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-        <Dropdown overlay={menu} trigger={["click"]} placement="bottomRight">
-          <Avatar size={36} icon={<UserOutlined />} style={{ cursor: "pointer" }} />
+      <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+        <Dropdown
+          overlay={menu}
+          trigger={["click"]}
+          placement="bottomRight"
+        >
+          <Avatar
+            size={40}
+            icon={<UserOutlined />}
+            style={{
+              cursor: "pointer",
+              background: theme === 'dark' ? "rgba(255, 255, 255, 0.20)" : "rgba(255, 255, 255, 0.20)",
+              border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.30)" : "1px solid rgba(255, 255, 255, 0.30)",
+              transition: 'all 0.3s ease'
+            }}
+          />
         </Dropdown>
       </div>
     </Header>

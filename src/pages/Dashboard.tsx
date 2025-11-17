@@ -60,28 +60,38 @@ export const Dashboard: React.FC = () => {
       <Sider
         collapsible
         trigger={null}
-        width={220}
-        className="dashboard-sider"
+        width={240}
+        className={`dashboard-sider ${theme}`}
         style={{
           color: 'var(--sider-color)',
-          paddingTop: 18,
-          boxShadow: "2px 0 6px rgba(0,0,0,0.06)"
+          paddingTop: 24,
+          transition: 'all 0.3s ease'
         }}
       >
-        <div style={{ color: "#FFFFFF", fontSize: 20, textAlign: "center", padding: "12px 8px", fontWeight: 700 }}>
+        <div style={{
+          color: theme === 'dark' ? "#FFFFFF" : "#1a1a1a",
+          fontSize: 24,
+          textAlign: "center",
+          padding: "16px 12px",
+          fontWeight: 700,
+          letterSpacing: '0.025em'
+        }}>
           My Library
         </div>
-        <div style={{ padding: 12 }}>
+        <div style={{ padding: 16 }}>
           <Button
             block
             icon={<BookOutlined />}
             onClick={() => navigate("/books")}
             style={{
-              marginBottom: 12,
-              borderRadius: 20,
-              background: (location.pathname === "/" || location.pathname === "/books") ? "rgba(255, 255, 255, 0.20)" : "transparent",
-              border: "1px solid rgba(255, 255, 255, 0.25)",
-              color: "#FFFFFF"
+              marginBottom: 16,
+              borderRadius: 50,
+              background: (location.pathname === "/" || location.pathname === "/books") ? "rgba(255, 255, 255, 0.25)" : "transparent",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              color: theme === 'dark' ? "#FFFFFF" : "#1a1a1a",
+              fontWeight: 600,
+              transition: 'all 0.3s ease',
+              boxShadow: (location.pathname === "/" || location.pathname === "/books") ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "none"
             }}
           >
             Books
@@ -91,36 +101,57 @@ export const Dashboard: React.FC = () => {
             icon={<TeamOutlined />}
             onClick={() => navigate("/users")}
             style={{
-              marginBottom: 12,
-              borderRadius: 20,
-              background: location.pathname === "/users" ? "rgba(255, 255, 255, 0.20)" : "transparent",
-              border: "1px solid rgba(255, 255, 255, 0.25)",
-              color: "#FFFFFF"
+              marginBottom: 16,
+              borderRadius: 50,
+              background: location.pathname === "/users" ? "rgba(255, 255, 255, 0.25)" : "transparent",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              color: theme === 'dark' ? "#FFFFFF" : "#1a1a1a",
+              fontWeight: 600,
+              transition: 'all 0.3s ease',
+              boxShadow: location.pathname === "/users" ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "none"
             }}
           >
             Users
           </Button>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12 }}>
-            <span style={{ color: "#FFFFFF", fontSize: 14 }}>{theme === "light" ? "Light Mode" : "Dark Mode"}</span>
-            <Switch checked={theme === "dark"} onChange={toggleTheme} />
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+            marginTop: 16,
+            padding: 12,
+            background: theme === 'dark' ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.05)",
+            borderRadius: 50,
+            transition: 'all 0.3s ease'
+          }}>
+            <span style={{
+              color: theme === 'dark' ? "#FFFFFF" : "#1a1a1a",
+              fontSize: 14,
+              fontWeight: 500,
+              letterSpacing: '0.01em'
+            }}>
+              {theme === "light" ? "Light Mode" : "Dark Mode"}
+            </span>
+            <Switch
+              checked={theme === "dark"}
+              onChange={toggleTheme}
+              style={{
+                background: theme === 'dark' ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.1)",
+                border: `1px solid ${theme === 'dark' ? "rgba(255, 255, 255, 0.3)" : "rgba(0, 0, 0, 0.1)"}`,
+                transition: 'all 0.3s ease'
+              }}
+            />
           </div>
         </div>
       </Sider>
       <Layout>
         <HeaderComponent />
-        <Content style={{ margin: "24px" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", padding: 8 }}>
-              <div style={{ display: "grid", gap: 20 }}>
-
-
-
-
-
-
-                <div>
-                  <Outlet />
-                </div>
+        <Content style={{ margin: "32px" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: 16 }}>
+            <div style={{ display: "grid", gap: 32 }}>
+              <div>
+                <Outlet />
               </div>
+            </div>
           </div>
         </Content>
       </Layout>
