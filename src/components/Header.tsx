@@ -54,7 +54,7 @@ export const HeaderComponent: React.FC = () => {
         <div style={{
           fontSize: 20,
           fontWeight: "bold",
-          color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
+          color: "#FFFFFF",
           letterSpacing: '0.01em'
         }}>
           Welcome to our library
@@ -71,8 +71,8 @@ export const HeaderComponent: React.FC = () => {
             icon={<UserOutlined />}
             style={{
               cursor: "pointer",
-              background: theme === 'dark' ? "rgba(255, 255, 255, 0.20)" : "rgba(255, 255, 255, 0.20)",
-              border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.30)" : "1px solid rgba(255, 255, 255, 0.30)",
+              background: "rgba(255, 255, 255, 0.20)",
+              border: "1px solid rgba(255, 255, 255, 0.30)",
               transition: 'all 0.3s ease'
             }}
           />

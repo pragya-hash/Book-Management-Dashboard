@@ -4,8 +4,8 @@
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(25px);
   border-radius: 22px;
-  padding: 40px;
-  margin-bottom: 40px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,6 +120,19 @@
   background: rgba(255, 255, 255, 0.30);
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.book-meta button {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.book-meta button:hover {
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .books-search {

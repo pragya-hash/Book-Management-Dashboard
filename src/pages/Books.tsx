@@ -70,7 +70,7 @@ export const Books: React.FC = () => {
         setPdfModalVisible(true);
       } catch (error) {
         console.error('Error opening PDF:', error);
-        
+
         setCurrentPdf(pdf);
         setPdfModalVisible(true);
       }
@@ -95,16 +95,6 @@ export const Books: React.FC = () => {
               type="primary"
               onClick={() => setModalVisible(true)}
               className="add-book-fab"
-              style={{
-                background: theme === 'dark' ? "rgba(255, 255, 255, 0.20)" : "rgba(255, 255, 255, 0.9)",
-                border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.30)" : "1px solid rgba(0, 0, 0, 0.1)",
-                color: theme === 'dark' ? "#FFFFFF" : "#1a1a1a",
-                borderRadius: 50,
-                padding: "12px 24px",
-                fontWeight: 600,
-                transition: 'all 0.3s ease',
-                boxShadow: theme === 'dark' ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "0 4px 12px rgba(0, 0, 0, 0.1)"
-              }}
             >
               Add Book
             </Button>
@@ -183,9 +173,13 @@ export const Books: React.FC = () => {
               style={{
                 padding: 16,
                 marginBottom: 8,
-                backgroundColor: theme === "dark" ? "#333" : "#f0f0f0",
-                borderRadius: 4,
-                color: theme === "dark" ? "#fff" : "#000",
+                background: "rgba(255, 255, 255, 0.12)",
+                border: "1px solid rgba(255, 255, 255, 0.25)",
+                backdropFilter: "blur(20px)",
+                borderRadius: 20,
+                color: "#FFFFFF",
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.25)",
+                transition: "all 0.3s ease"
               }}
               draggable
               onDragStart={() => handleDragStart(index)}

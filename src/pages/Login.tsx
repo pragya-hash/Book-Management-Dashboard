@@ -27,8 +27,6 @@ export const Login: React.FC = () => {
     }, 1000);
   };
 
-  const theme = useAppStore((state) => state.theme);
-
   return (
     <div
       style={{
@@ -36,7 +34,7 @@ export const Login: React.FC = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "linear-gradient(135deg, #1C0F5F 0%, #2364D2 100%)",
+        background: "linear-gradient(135deg, #1a0f49 0%, #2e4bea 100%)",
         transition: 'all 0.3s ease'
       }}
     >
@@ -44,20 +42,20 @@ export const Login: React.FC = () => {
         name="login"
         onFinish={onFinish}
         style={{
-          background: theme === 'dark' ? "rgba(255, 255, 255, 0.05)" : "rgba(255, 255, 255, 0.12)",
-          border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.1)" : "1px solid rgba(255, 255, 255, 0.25)",
-          backdropFilter: "blur(20px)",
+          background: "rgba(255, 255, 255, 0.15)",
+          border: "1px solid rgba(255, 255, 255, 0.25)",
+          backdropFilter: "blur(25px)",
           padding: 40,
-          borderRadius: 20,
+          borderRadius: 22,
           minWidth: 320,
-          color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
-          boxShadow: theme === 'dark' ? "0 20px 40px rgba(0,0,0,0.3)" : "0 20px 40px rgba(0,0,0,0.1)",
+          color: "#FFFFFF",
+          boxShadow: "0 20px 40px rgba(0, 0, 0, 0.35)",
           transition: 'all 0.3s ease'
         }}
       >
         <div style={{ textAlign: "center", marginBottom: 24 }}>
           <h2 style={{
-            color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
+            color: "#FFFFFF",
             marginBottom: 8,
             fontWeight: 600,
             letterSpacing: '0.01em'
@@ -65,7 +63,7 @@ export const Login: React.FC = () => {
             Welcome Back
           </h2>
           <p style={{
-            color: theme === 'dark' ? "#D6DAE8" : "#FFFFFF",
+            color: "#C9D3F5",
             fontSize: 14,
             letterSpacing: '0.01em'
           }}>
@@ -73,38 +71,38 @@ export const Login: React.FC = () => {
           </p>
         </div>
         <Form.Item
-          label={<span style={{ color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF", fontWeight: 500 }}>Email</span>}
+          label={<span style={{ color: "#FFFFFF", fontWeight: 500 }}>Email</span>}
           name="email"
           rules={[{ required: true, message: "Please input your email!" }]}
         >
           <Input
             style={{
-              background: theme === 'dark' ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.12)",
-              border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.25)" : "1px solid rgba(255, 255, 255, 0.25)",
-              color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
-              borderRadius: 20,
+              background: "rgba(255, 255, 255, 0.22)",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
+              color: "#FFFFFF",
+              borderRadius: 12,
               padding: "12px 16px",
-              transition: 'all 0.3s ease',
-              boxShadow: theme === 'dark' ? "inset 0 2px 4px rgba(0, 0, 0, 0.1)" : "inset 0 2px 4px rgba(0, 0, 0, 0.1)"
+              transition: 'all 0.3s ease'
             }}
+            placeholder="Enter your email"
           />
         </Form.Item>
 
         <Form.Item
-          label={<span style={{ color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF", fontWeight: 500 }}>Password</span>}
+          label={<span style={{ color: "#FFFFFF", fontWeight: 500 }}>Password</span>}
           name="password"
           rules={[{ required: true, message: "Please input your password!" }]}
         >
           <Input.Password
             style={{
-              background: theme === 'dark' ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.12)",
-              border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.25)" : "1px solid rgba(255, 255, 255, 0.25)",
-              color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
-              borderRadius: 20,
+              background: "rgba(255, 255, 255, 0.22)",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
+              color: "#FFFFFF",
+              borderRadius: 12,
               padding: "12px 16px",
-              transition: 'all 0.3s ease',
-              boxShadow: theme === 'dark' ? "inset 0 2px 4px rgba(0, 0, 0, 0.1)" : "inset 0 2px 4px rgba(0, 0, 0, 0.1)"
+              transition: 'all 0.3s ease'
             }}
+            placeholder="Enter your password"
           />
         </Form.Item>
 
@@ -115,14 +113,13 @@ export const Login: React.FC = () => {
             loading={loading}
             block
             style={{
-              background: theme === 'dark' ? "rgba(255, 255, 255, 0.20)" : "rgba(255, 255, 255, 0.20)",
-              border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.30)" : "1px solid rgba(255, 255, 255, 0.30)",
-              color: theme === 'dark' ? "#FFFFFF" : "#FFFFFF",
-              borderRadius: 50,
+              background: "rgba(255, 255, 255, 0.25)",
+              border: "1px solid rgba(255, 255, 255, 0.25)",
+              color: "#FFFFFF",
+              borderRadius: 12,
               fontWeight: 600,
               padding: "12px 24px",
-              transition: 'all 0.3s ease',
-              boxShadow: theme === 'dark' ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "0 4px 12px rgba(0, 0, 0, 0.15)"
+              transition: 'all 0.3s ease'
             }}
           >
             Login

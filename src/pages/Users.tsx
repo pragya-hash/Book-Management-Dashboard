@@ -8,7 +8,6 @@ export const Users: React.FC = () => {
   const users = useAppStore((state) => state.users);
   const addUser = useAppStore((state) => state.addUser);
   const session = useAppStore((state) => state.session);
-  const theme = useAppStore((state) => state.theme);
   const [modalVisible, setModalVisible] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -30,29 +29,19 @@ export const Users: React.FC = () => {
   const filtered = users.slice().reverse().filter(u => u.username.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <div data-theme={theme}>
-      <div className={`users-toolbar ${theme}`}>
+    <div>
+      <div className="users-toolbar">
         <Space>
           {session.user?.role === "admin" && (
             <Button
               onClick={() => setModalVisible(true)}
               className="add-user-fab"
-              style={{
-                background: theme === 'dark' ? "rgba(255, 255, 255, 0.20)" : "rgba(255, 255, 255, 0.9)",
-                border: theme === 'dark' ? "1px solid rgba(255, 255, 255, 0.30)" : "1px solid rgba(0, 0, 0, 0.1)",
-                color: theme === 'dark' ? "#FFFFFF" : "#1a1a1a",
-                borderRadius: 50,
-                padding: "12px 24px",
-                fontWeight: 600,
-                transition: 'all 0.3s ease',
-                boxShadow: theme === 'dark' ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "0 4px 12px rgba(0, 0, 0, 0.1)"
-              }}
             >
               Add User
             </Button>
           )}
           <Input
-            className={`users-search ${theme}`}
+            className="users-search"
             placeholder="Search users"
             value={search}
             onChange={e => setSearch(e.target.value)}
@@ -66,7 +55,6 @@ export const Users: React.FC = () => {
         dataSource={filtered}
         columns={adminColumns}
         rowKey="username"
-        className={theme}
       />
 
       <Modal
