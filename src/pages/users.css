@@ -1,31 +1,30 @@
-
-/* Modern Glassmorphism Users */
+/* Modern Light Theme Users */
 .users-toolbar {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(25px);
-  border-radius: 22px;
-  padding: 16px 24px;
-  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .users-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 32px;
+  gap: 24px;
   margin-bottom: 32px;
 }
 
 .user-card {
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   transition: all 0.3s ease;
   min-height: 140px;
@@ -33,161 +32,109 @@
   flex-direction: column;
   justify-content: center;
   padding: 24px;
-  color: #FFFFFF;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  color: #1a1a1a;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .user-card:hover {
-  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   transform: translateY(-8px) scale(1.02);
 }
 
 .user-name {
   font-weight: 700;
   margin-bottom: 8px;
-  color: #FFFFFF;
+  color: #1a1a1a;
   font-size: 1.25rem;
   letter-spacing: 0.01em;
+  font-family: 'Poppins', sans-serif;
 }
 
 .user-role {
-  color: #C9D3F5;
+  color: #666;
   font-size: 14px;
   letter-spacing: 0.01em;
 }
 
 .add-user-fab {
-  background: rgba(255, 255, 255, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.30);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 50px;
   padding: 12px 24px;
   height: auto;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 .add-user-fab:hover {
-  background: rgba(255, 255, 255, 0.30);
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 .users-search {
   border-radius: 50px !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(20px) !important;
-  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  color: #1a1a1a !important;
   padding: 12px 16px !important;
   font-size: 1rem !important;
   transition: all 0.3s ease !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05) !important;
 }
 
 .users-search::placeholder {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: #999 !important;
 }
 
 .users-toggle {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(20px) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
   border-radius: 20px !important;
   padding: 4px 12px !important;
-  color: #FFFFFF !important;
+  color: #1a1a1a !important;
   transition: all 0.3s ease !important;
 }
 
 .users-empty {
   text-align: center;
-  color: #FFFFFF;
+  color: #1a1a1a;
   font-size: 1.25rem;
   padding: 64px 0;
   width: 100%;
   letter-spacing: 0.01em;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Table Styles for Users Page */
 .ant-table {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(20px) !important;
-  border-radius: 20px !important;
+  border-radius: 24px !important;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .ant-table-thead > tr > th {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
-  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #1a1a1a !important;
   font-weight: 600;
   letter-spacing: 0.01em;
+  font-family: 'Poppins', sans-serif;
 }
 
 .ant-table-tbody > tr > td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: #FFFFFF !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  color: #1a1a1a !important;
   transition: all 0.3s ease;
 }
 
 .ant-table-tbody > tr:hover > td {
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(0, 0, 0, 0.02) !important;
 }
-
-.add-user-fab {
-  background: rgba(255, 255, 255, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.30);
-  color: #FFFFFF;
-  font-weight: 600;
-  border-radius: 12px;
-  padding: 12px 24px;
-  height: auto;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.add-user-fab:hover {
-  background: rgba(255, 255, 255, 0.30);
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.users-search {
-  border-radius: 50px !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(20px) !important;
-  color: #FFFFFF !important;
-  padding: 12px 16px !important;
-  font-size: 1rem !important;
-  transition: all 0.3s ease !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-}
-
-.users-search::placeholder {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.users-toggle {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(20px) !important;
-  border-radius: 20px !important;
-  padding: 4px 12px !important;
-  color: #FFFFFF !important;
-  transition: all 0.3s ease !important;
-}
-
-.users-empty {
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  padding: 64px 0;
-  width: 100%;
-  letter-spacing: 0.01em;
-}
-
-
